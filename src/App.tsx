@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./pages/Main/Main";
 
-export default function App() {
- 
-
+function App() {
   return (
-    <div>
-      <h1>Test 1</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+export default App;
