@@ -1,18 +1,26 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import Layout from "../../layout/Layout";
 
 export default function Main() {
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/21")
+      .then((res) => res.json())
+      .then((json) => console.log(json));
+  }, []);
+
   return (
-    <div>
+    <Layout>
       <Helmet>
-        <title>Products page</title>
+        <title>Əsas səhifə</title>
         <meta
           name="description"
           content="Beginner friendly page for learning React Helmet."
         />
       </Helmet>
-      <h1 className="text-red-600 font-semibold text-3xl">
-        Main page of project
-      </h1>
-    </div>
+      <div >
+      
+      </div>
+    </Layout>
   );
 }
