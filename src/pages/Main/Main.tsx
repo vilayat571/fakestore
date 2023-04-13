@@ -3,11 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "../../layout/Layout";
 
 export default function Main() {
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products/21")
-      .then((res) => res.json())
-      .then((json) => console.log(json));
-  }, []);
+
 
   return (
     <Layout>

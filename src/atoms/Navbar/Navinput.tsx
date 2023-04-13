@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface IofNavInput {
   handleSubmit(e: React.FormEvent<HTMLFormElement>): void;
@@ -13,10 +14,13 @@ export default function Navinput() {
     setQuery(e.target.value);
   };
 
+  const navigate=useNavigate();
+
   const handleSubmit: IofNavInput["handleSubmit"] = (e) => {
     e.preventDefault();
     console.log("Query", query);
     /* ... */
+    navigate('/results')
   };
 
   return (
